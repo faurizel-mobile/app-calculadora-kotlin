@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditValor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número 1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditValor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número 2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonAdicao"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:text="+"
+        app:cornerRadius="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <Button
+        android:id="@+id/buttonMultiplicacao"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:text="*"
+        app:cornerRadius="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSubtracao"
+        app:layout_constraintTop_toTopOf="@+id/buttonSubtracao"
+        tools:layout_editor_absoluteX="224dp" />
+
+    <Button
+        android:id="@+id/buttonSubtracao"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:text="-"
+        app:cornerRadius="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAdicao"
+        app:layout_constraintTop_toTopOf="@+id/buttonAdicao"
+        tools:layout_editor_absoluteX="138dp" />
+
+    <Button
+        android:id="@+id/buttonDivisao"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:text="/"
+        app:cornerRadius="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMultiplicacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiplicacao"
+        app:layout_constraintTop_toTopOf="@+id/buttonMultiplicacao"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdicao"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Resulado:"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:layout_editor_absoluteX="42dp" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Limpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="8dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Calculadora" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="153dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
