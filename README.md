@@ -30,6 +30,51 @@ Este projeto foi criado para servir como exemplo didático de:
 - Material Components
 - ConstraintLayout
 
+## Mockup do App
+
+A calculadora possui a seguinte interface:
+
+```
+┌─────────────────────────────────────┐
+│         📱 Calculadora              │
+├─────────────────────────────────────┤
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ Número 1        [        ]  │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ Número 2        [        ]  │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐
+│  │  +   │  │  -   │  │  *   │  │  /   │
+│  └──────┘  └──────┘  └──────┘  └──────┘
+│                                     │
+│  ─────────────────────────────────  │
+│                                     │
+│  Resultado:  [          ]           │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │      Limpar                 │   │
+│  └─────────────────────────────┘   │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+### Elementos da interface:
+
+| Componente | Tipo | Função |
+|-----------|------|--------|
+| Número 1 | EditText | Campo para entrada do primeiro número |
+| Número 2 | EditText | Campo para entrada do segundo número |
+| Botão + | Button | Realiza adição |
+| Botão - | Button | Realiza subtração |
+| Botão * | Button | Realiza multiplicação |
+| Botão / | Button | Realiza divisão |
+| Resultado | TextView | Exibe o resultado do cálculo |
+| Limpar | Button | Limpa os campos de entrada |
+
 ## Estrutura do projeto
 
 ```text
